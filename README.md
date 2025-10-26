@@ -1,6 +1,6 @@
 # StockWise - Inventory Management System
 
-![Frontend Screenshot](frontend_screenshot.png)  
+![Frontend Screenshot](ProjectScreenshot.png)  
 *Above is a screenshot of the frontend interface of StockWise.*
 
 ---
