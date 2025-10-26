@@ -6,7 +6,6 @@
 ---
 
 ## Table of Contents
-
 1. [Project Overview](#project-overview)  
 2. [Features](#features)  
 3. [Technologies Used](#technologies-used)  
@@ -22,16 +21,11 @@
 ---
 
 ## Project Overview
-
-**StockWise** is a simple inventory management system that allows users to manage products with basic CRUD operations.  
-It is built using **FastAPI** for the backend, **PostgreSQL** as the database, and a **vanilla JavaScript frontend** for interacting with the API.  
-
-The system is designed to be lightweight, fast, and easy to extend. Users can add, update, delete, and search for products with an interactive frontend interface.
+**StockWise** is a simple inventory management system that allows users to manage products with basic CRUD operations. It is built using **FastAPI** for the backend, **PostgreSQL** as the database, and a **vanilla JavaScript frontend** for interacting with the API. The system is designed to be lightweight, fast, and easy to extend. Users can add, update, delete, and search for products with an interactive frontend interface.
 
 ---
 
 ## Features
-
 - **Product CRUD Operations:** Create, Read, Update, Delete products.  
 - **Search Functionality:** Search by product ID, name, or description.  
 - **Responsive Frontend:** Simple and clean UI using HTML, CSS, and JavaScript.  
@@ -42,23 +36,46 @@ The system is designed to be lightweight, fast, and easy to extend. Users can ad
 ---
 
 ## Technologies Used
-
-- **Backend:**  
-  - FastAPI  
-  - SQLAlchemy  
-  - PostgreSQL  
-  - Pydantic  
-
-- **Frontend:**  
-  - HTML5  
-  - CSS3  
-  - JavaScript (Vanilla JS)  
-
-- **Other Tools:**  
-  - `uvicorn` (for running FastAPI)  
-  - `Postman` or browser for testing APIs  
+- **Backend:** FastAPI, SQLAlchemy, PostgreSQL, Pydantic  
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla JS)  
+- **Other Tools:** `uvicorn` (for running FastAPI), Postman or browser for testing APIs
 
 ---
 
 ## Folder Structure
+Project/
+├─ Backend/
+│ ├─ database.py # PostgreSQL connection & session setup
+│ ├─ main.py # FastAPI application with all routes
+│ ├─ models.py # SQLAlchemy models
+│ └─ schemas.py # Pydantic models for validation
+└─ Frontend/
+├─ app.js # JavaScript logic for frontend CRUD operations
+├─ index.html # Frontend HTML template
+└─ style.css # Frontend styling
 
+---
+
+## API Endpoints
+| Method | Endpoint               | Description                        | Request Body |
+|--------|-----------------------|------------------------------------|--------------|
+| GET    | `/products/`          | Retrieve all products              | None         |
+| GET    | `/products/{id}`      | Retrieve product by ID             | None         |
+| POST   | `/products/`          | Add a new product                  | Product JSON |
+| PUT    | `/products/{id}`      | Update existing product            | Product JSON |
+| DELETE | `/products/{id}`      | Delete product by ID               | None         |
+
+**Product JSON Example:**  
+{
+"id": 5,
+"name": "Chair",
+"description": "A comfortable chair",
+"price": 89.99,
+"quantity": 15
+}
+
+---
+## Conclusion
+Working on the StockWise project has been a highly rewarding experience. This project helped me strengthen my understanding of full-stack development by integrating a FastAPI backend with a vanilla JavaScript frontend. I learned how to design RESTful APIs, manage database interactions with SQLAlchemy and PostgreSQL, implement CRUD operations, and handle frontend-backend communication using fetch requests.  
+
+Additionally, I gained practical experience in project structuring, error handling, and creating a user-friendly interface. Overall, this project improved my confidence in building end-to-end applications and provided valuable insights into best practices for web development.
