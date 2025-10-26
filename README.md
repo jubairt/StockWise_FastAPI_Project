@@ -43,16 +43,18 @@
 ---
 
 ## Folder Structure
+
 Project/
 ├─ Backend/
-│ ├─ database.py # PostgreSQL connection & session setup
-│ ├─ main.py # FastAPI application with all routes
-│ ├─ models.py # SQLAlchemy models
-│ └─ schemas.py # Pydantic models for validation
+│  ├─ database.py      – PostgreSQL connection & session setup
+│  ├─ main.py          – FastAPI application with all routes
+│  ├─ models.py        – SQLAlchemy models
+│  └─ schemas.py       – Pydantic models for validation
 └─ Frontend/
-├─ app.js # JavaScript logic for frontend CRUD operations
-├─ index.html # Frontend HTML template
-└─ style.css # Frontend styling
+   ├─ app.js           – JavaScript logic for frontend CRUD operations
+   ├─ index.html       – Frontend HTML template
+   └─ style.css        – Frontend styling
+
 
 ---
 
